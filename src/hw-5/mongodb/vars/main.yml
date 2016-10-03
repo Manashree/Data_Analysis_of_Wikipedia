@@ -1,0 +1,12 @@
+---
+# vars file for test-role
+
+mongodb_keyserver: "hkp://keyserver.ubuntu.com:80"
+mongodb_gpgkey_id: EA312927
+mongodb_repository_list: "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse"
+dest_path: "/lib/systemd/system/mongodb.service"
+lock_file_parent: "/var/lib/mongodb"
+sock_file_path: "/tmp/mongodb-27017.sock"
+template_plate: mongodb.service.j2
+mongodb_package_name: mongodb
+

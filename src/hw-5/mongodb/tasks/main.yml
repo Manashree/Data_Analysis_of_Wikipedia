@@ -1,0 +1,16 @@
+---
+# tasks file for test-role
+- name: Import public key
+  apt_key: keyserver={{mongodb_keyserver}} id={{mongodb_gpgkey_id}} state=present
+- name: Add MongoDB repo
+  apt_repository: repo={{mongodb_repository_list}} state=present
+- name: Install MongoDB
+  apt: pkg="mongodb-org" state=present
+- file: path= {{sock_file_path}} state=absent
+- name: force handlers
+  shell: echo "Hello World"
+  notify:
+  - start mongodb
+- template: src={{template_plate}} dest={{dest_path}} owner=root mode=0644
+  notify:
+  - reload mongodb
