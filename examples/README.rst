@@ -4,8 +4,7 @@ Exploratory Data Analysis of Wikipedia
 ******************************
 Instructions for deploying
 ******************************
-- Download script.sh from git src folder:
-  https://github.iu.edu/animhan/sw-project-template/blob/master/src/script.sh
+- Download script.sh from git src folder.
 - Make sure CH-817724-openrc.sh is present under ~/. If it is not present, download it from your Chameleon Cloud Account under API access section.
 - Execute : bash script.sh
 - Check which node is master node by executing the command: nova list | grep "$USER". The master node will be named as "$USER-master0"
@@ -24,4 +23,4 @@ Instructions for deploying
     - hadoop dfs -ls /top50ReferersDonaldTrumph
     - hadoop dfs -ls /top50ReferersToPresidentialCandidates
     - hadoop dfs -ls /top50ReferersToObama
-- Visualizations of Analysis have been shared in the repository at https://github.iu.edu/animhan/sw-project-template/blob/master/viz/
+- Visualizations of Analysis have been shared in the repository.
